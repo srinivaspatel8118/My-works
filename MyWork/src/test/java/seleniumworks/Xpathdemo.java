@@ -51,9 +51,11 @@ import lib.shots;
 	
 			driver.findElement(By.xpath("//input[@name='pass']")).sendKeys("Srinivaspatel8118.");
 			 driver.manage().timeouts().pageLoadTimeout(40, TimeUnit.SECONDS);
+			
+			 
 			driver.findElement(By.xpath("//label[@id='loginbutton']")).click();
-			// WebDriverWait wait=new WebDriverWait(driver,40);
-			// wait.pollingEvery(5, TimeUnit.SECONDS);
+			//WebDriverWait wait=new WebDriverWait(driver,40);
+			//wait.pollingEvery(5, TimeUnit.SECONDS);
 			// WebElement element = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[@id='pageLoginAnchor']")));
 			//Thread.sleep(10000);
 			shots.captureScreenshots(driver,"HomePage");

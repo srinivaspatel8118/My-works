@@ -50,19 +50,26 @@ import lib.shots;
 			
 	
 			driver.findElement(By.xpath("//input[@name='pass']")).sendKeys("Srinivaspatel8118.");
-			  driver.manage().timeouts().pageLoadTimeout(40, TimeUnit.SECONDS);
+			 driver.manage().timeouts().pageLoadTimeout(40, TimeUnit.SECONDS);
 			driver.findElement(By.xpath("//label[@id='loginbutton']")).click();
-			Thread.sleep(10000);
+			// WebDriverWait wait=new WebDriverWait(driver,40);
+			// wait.pollingEvery(5, TimeUnit.SECONDS);
+			// WebElement element = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[@id='pageLoginAnchor']")));
+			//Thread.sleep(10000);
 			shots.captureScreenshots(driver,"HomePage");
-			  driver.manage().timeouts().pageLoadTimeout(40, TimeUnit.SECONDS);
+			 // driver.manage().timeouts().pageLoadTimeout(40, TimeUnit.SECONDS);
+			  
+			 // WebDriverWait wait=new WebDriverWait(driver,40);
+			 // WebElement element = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[@id='pageLoginAnchor']")));
+			  
 			driver.findElement(By.xpath("//a[@id='pageLoginAnchor']")).click();
-			Thread.sleep(10000);
+			//Thread.sleep(10000);
 			shots.captureScreenshots(driver,"Accountsetting");
 			driver.findElement(By.xpath("(//*[text()='Settings'])[4]")).click();
-			Thread.sleep(10000);
+			//Thread.sleep(10000);
 			shots.captureScreenshots(driver,"Settingspage");
 			driver.findElement(By.xpath("//a[@id='pageLoginAnchor']")).click();
-			Thread.sleep(5000);
+			//Thread.sleep(5000);
 			//driver.findElement(By.xpath("//li[@class='_54ni navSubmenu _6398 _64kz __MenuItem'][@role='presentation']")).click();
 			////li[@class='_54ni __MenuItem']/span//following::li[14] using following worked
 			driver.findElement(By.xpath("//li[@class='_54ni __MenuItem']/span//following::li[14]")).click();
@@ -75,7 +82,7 @@ import lib.shots;
 		@AfterMethod
 		public void failurescreenshot(ITestResult result)
 		{
-			if(ITestResult.FAILURE==result.getStatus())
+			if(ITestResult.SUCCESS==result.getStatus())
 			{
 				shots.captureScreenshots(driver, result.getName());
 				

@@ -21,7 +21,7 @@ public class shots {
 			System.out.println("screen shot taken");
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			System.out.println("Exception is"+e);
+			System.out.println("Excep tion is"+e);
 		} 
 	}
 	

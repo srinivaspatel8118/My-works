@@ -14,7 +14,6 @@ public class shots {
 	public static void captureScreenshots(WebDriver driver, String shotname)
 	{
 		try {
-			System.out.println("Test statging");
 			TakesScreenshot ts = (TakesScreenshot)driver;
 			
 			File source=ts.getScreenshotAs(OutputType.FILE);
